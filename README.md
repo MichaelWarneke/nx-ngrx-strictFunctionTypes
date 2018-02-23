@@ -1,44 +1,14 @@
 # NgrxBasic
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5 using [Nrwl Nx](https://nrwl.io/nx).
+This project was created with Nrwl Nx 0.7.4 using Angular CLI 1.6.5
 
-## Nrwl Extensions for Angular (Nx)
+## What is it for
 
-<a href="https://nrwl.io/nx"><img src="https://preview.ibb.co/mW6sdw/nx_logo.png"></a>
+Since Typescript 2.6 there is the option for strict function types --strictFunctionTypes.
+This option will be included when using "strict": true in the tsconfig.json.
 
-Nx is an open source toolkit for enterprise Angular applications.
+The strict checking might become standard for future Angular / CLI versions.
 
-Nx is designed to help you create and build enterprise grade Angular applications. It provides an opinionated approach to application project structure and patterns.
+When compiling a project with ngrx included these checks will cause a lot of problems in regards to type checking.
 
-## Quick Start & Documentation
-
-[Watch a 5-minute video on how to get started with Nx.](http://nrwl.io/nx)
-
-## Generate your first application
-
-Run `ng generate app myapp` to generate an application. When using Nx, you can create multiple applications and libraries in the same CLI workspace. Read more [here](http://nrwl.io/nx).
-
-## Development server
-
-Run `ng serve --app=myapp` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name --app=myapp` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build --app=myapp` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+With this project I want to show the manual changes to be made to the ngrx implemention to get it compiled.
