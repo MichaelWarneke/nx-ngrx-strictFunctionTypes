@@ -1,6 +1,6 @@
-import { Core, CoreState } from "./core.interfaces";
-import { CoreAction, CoreActionTypes } from "./core.actions";
-import * as fromRouter from "@ngrx/router-store";
+import { Core, CoreState } from './core.interfaces';
+import { CoreAction, CoreActionTypes } from './core.actions';
+import * as fromRouter from '@ngrx/router-store';
 
 export function coreReducer(state: Core, action: CoreAction): Core {
   switch (action.type) {
@@ -24,9 +24,9 @@ export const selectName = (state: CoreState) => state.core.name;
  * exception will be thrown. This is useful during development mode to
  * ensure that none of the reducers accidentally mutates the state.
  */
-import { storeFreeze } from "ngrx-store-freeze";
-import { MetaReducer, ActionReducerMap, ActionReducer } from "@ngrx/store";
-import { RouterStateUrl } from "../router-utils";
+import { storeFreeze } from 'ngrx-store-freeze';
+import { MetaReducer, ActionReducerMap, ActionReducer } from '@ngrx/store';
+import { RouterStateUrl } from '../router-utils';
 
 /**
  * Every reducer module's default export is the reducer function itself. In
@@ -58,8 +58,8 @@ export const reducers: ActionReducerMap<any, any> = {
 export function logger(reducer: ActionReducer<State>): ActionReducer<State> {
   return function(state: State | undefined, action: any): State {
     const type: string = action.type;
-    console.log("state", state);
-    console.log("action", action);
+    console.log('state', state);
+    console.log('action', action);
 
     return reducer(state, action);
   };
