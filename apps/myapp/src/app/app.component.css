@@ -1,0 +1,12 @@
+.navigation {
+  display: flex;
+  margin: 5px;
+  border-bottom: 5px solid lightcoral;
+}
+
+.nav-link {
+  margin: 5px;
+  padding: 5px;
+  background-color: lightgrey;
+  font-size: larger;
+}

@@ -1,12 +1,15 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input, EventEmitter, Output } from "@angular/core";
 
 @Component({
-  selector: "app-page",
+  selector: "lazy-page",
   templateUrl: "./page.component.html",
   styleUrls: ["./page.component.css"]
 })
-export class PageComponent implements OnInit {
-  constructor() {}
+export class PageComponent {
+  @Input() name = "";
+  @Output() changeName: EventEmitter<string> = new EventEmitter<string>();
 
-  ngOnInit() {}
+  keyPressed(text: string) {
+    this.changeName.emit(text);
+  }
 }

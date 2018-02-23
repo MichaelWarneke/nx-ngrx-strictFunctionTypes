@@ -1,3 +1,7 @@
 <p>
-  Lazy page works!
+  Name : {{name}}
+</p>
+<p>
+  Change Name
+  <input id="nameInput" name="nameInpout" type="text" placeholder="Change Name" (input)="keyPressed($event.target.value)">
 </p>

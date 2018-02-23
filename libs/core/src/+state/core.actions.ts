@@ -1,11 +1,16 @@
-export interface LoadData {
-  type: 'LOAD_DATA';
+export enum CoreActionTypes {
+  SWITCH_LAMP = '[Core] Switch Lamp',
+  CHANGE_NAME = '[Core] Change Name'
+}
+
+export interface SwitchLamp {
+  type: CoreActionTypes.SWITCH_LAMP;
   payload: {};
 }
 
-export interface DataLoaded {
-  type: 'DATA_LOADED';
-  payload: {};
+export interface ChangeName {
+  type: CoreActionTypes.CHANGE_NAME;
+  payload: string;
 }
 
-export type CoreAction = LoadData | DataLoaded;
+export type CoreAction = SwitchLamp | ChangeName;

@@ -40,7 +40,8 @@
     "@ngrx/effects": "4.1.1",
     "@ngrx/router-store": "4.1.1",
     "@ngrx/store": "4.1.1",
-    "@ngrx/store-devtools": "4.0.0"
+    "@ngrx/store-devtools": "4.0.0",
+    "ngrx-store-freeze": "0.2.1"
   },
   "devDependencies": {
     "@angular/cli": "file:.angular_cli165.tgz",

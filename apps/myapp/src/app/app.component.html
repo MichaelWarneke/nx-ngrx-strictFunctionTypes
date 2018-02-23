@@ -4,7 +4,10 @@
   </h1>
 </div>
 
-<a [routerLink]="['/']">Home</a>
-<br>
-<a [routerLink]="['/mylazy']">Lazy</a>
+<div class="navigation">
+  <a class="nav-link" [routerLink]="['/']">Home</a>
+  <br>
+  <a class="nav-link" [routerLink]="['/mylazy']">Lazy</a>
+</div>
+<app-lamp [lampOn]="lampOn$ | async" (lampButtonPressed)="SwitchLamp()"></app-lamp>
 <router-outlet></router-outlet>

@@ -1,26 +1,19 @@
-import { Injectable } from '@angular/core';
-import { Effect, Actions } from '@ngrx/effects';
-import { DataPersistence } from '@nrwl/nx';
-import { of } from 'rxjs/observable/of';
-import 'rxjs/add/operator/switchMap';
-import { CoreState } from './core.interfaces';
-import { LoadData, DataLoaded } from './core.actions';
+import { Injectable } from "@angular/core";
+import { Effect, Actions } from "@ngrx/effects";
+import { DataPersistence } from "@nrwl/nx";
+import { CoreState } from "./core.interfaces";
+import { tap, map } from "rxjs/operators";
+import { CoreActionTypes, CoreAction } from "./core.actions";
 
 @Injectable()
 export class CoreEffects {
-  @Effect()
-  loadData = this.dataPersistence.fetch('LOAD_DATA', {
-    run: (action: LoadData, state: CoreState) => {
-      return {
-        type: 'DATA_LOADED',
-        payload: {}
-      };
-    },
+  @Effect({ dispatch: false })
+  switchLamp$ = this.actions
+    .ofType(CoreActionTypes.SWITCH_LAMP)
+    .pipe(tap(() => console.log("Effect SwitchLamp")));
 
-    onError: (action: LoadData, error) => {
-      console.error('Error', error);
-    }
-  });
-
-  constructor(private actions: Actions, private dataPersistence: DataPersistence<CoreState>) {}
+  constructor(
+    private actions: Actions,
+    private dataPersistence: DataPersistence<CoreState>
+  ) {}
 }
