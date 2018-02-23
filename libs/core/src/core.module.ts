@@ -9,7 +9,7 @@ import { CoreEffects } from "./+state/core.effects";
 @NgModule({
   imports: [
     CommonModule,
-    StoreModule.forRoot(
+    StoreModule.forRoot<any, any>(
       { core: coreReducer },
       { initialState: { core: coreInitialState } }
     ),
