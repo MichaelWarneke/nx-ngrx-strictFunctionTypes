@@ -27,7 +27,7 @@ ActionReducerMap with types <any, any> is the key.
 It will break with the router store version 5.0.1 if the type is anything else.
 
 It seems the problem is in the router store where the reducer function needs to have the store as Store | undefined.
-There is already a fix done by Brandon and can be found on the ngrx/platform repo branch strict-example.
+There is already a fix done by Brandon and can be found on the ngrx/platform repo branch strict-example. https://github.com/ngrx/platform/tree/strict-example
 
 ## When do you need it
 
